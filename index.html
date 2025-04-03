@@ -1,172 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flappy Bird Game</title>
-  <!-- Load p5.js and p5.play.js Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/molleindustria/p5.play/lib/p5.play.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden; /* Prevent scrolling */
-    }
-    canvas {
-      display: block;
-      margin: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <script>
-    // Declare global variables
-    var player, block, block2, goldCoin, silverCoin, bronzeCoin;
-    var score = 0;
-    var health = 100;
-    var jumpCount = 0; // Track number of jumps
-    var frameCounter = 0;
-    var blockCollision = false;
-    var coinCounter = 0;
 
-    function setup() {
-      createCanvas(400, 400); // Create the game canvas
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a id="profile-link" href="https://github.com/asdf-5844" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
 
-      // Initialize player sprite
-      player = createSprite(30, 370, 20, 20); // x, y, width, height
-      player.shapeColor = "blue";
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+        <h1>Welcome to My Portfolio</h1>
+        <p> Random | Guy | on | Earth</p>
+    </section>
 
-      // Initialize block sprites
-      block = createSprite(250, 380, 40, 40);
-      block.shapeColor = "red";
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-tile">
+            <a href="https://myproject.com" target="_blank">
+                <img src="project-thumbnail.jpg" alt="Project Thumbnail">
+                <p>Project Name</p>
+            </a>
+        </div>
+    </section>
 
-      block2 = createSprite(250, 50, 40, 40);
-      block2.shapeColor = "orange";
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: abcdefg@gmail.com</p>
+    </section>
 
-      // Initialize coin sprites
-      goldCoin = createSprite(200, 200, 15, 15);
-      goldCoin.shapeColor = "yellow";
-      goldCoin.visible = true;
-
-      silverCoin = createSprite(200, 200, 15, 15);
-      silverCoin.shapeColor = "gray";
-      silverCoin.visible = false;
-
-      bronzeCoin = createSprite(200, 200, 15, 15);
-      bronzeCoin.shapeColor = "brown";
-      bronzeCoin.visible = false;
-    }
-
-    // Custom isTouching function
-    function isTouching(sprite1, sprite2) {
-      // Check for overlap on the x-axis
-      let xOverlap = 
-        (sprite1.x > sprite2.x && (sprite1.x - sprite2.x) < (sprite1.width / 2 + sprite2.width / 2)) ||
-        (sprite1.x < sprite2.x && (sprite1.x - sprite2.x) > -(sprite1.width / 2 + sprite2.width / 2));
-
-      // Check for overlap on the y-axis
-      let yOverlap = 
-        (sprite1.y > sprite2.y && (sprite1.y - sprite2.y) < (sprite1.height / 2 + sprite2.height / 2)) ||
-        (sprite1.y < sprite2.y && (sprite1.y - sprite2.y) > -(sprite1.height / 2 + sprite2.height / 2));
-
-      // Return true if both x and y overlap (touching)
-      return xOverlap && yOverlap;
-    }
-
-    function resetCoin(coin) {
-      coin.x = random(400, 600); // Random x position to the right
-      coin.y = random(50, 350);  // Random vertical position
-    }
-
-    function moveObstacle(obstacle) {
-      obstacle.velocityX = -5; // Move left
-      if (obstacle.x < -10) {
-        obstacle.x = random(400, 600); // Reset to the right
-      }
-    }
-
-    function draw() {
-      background(3, 86, 252); // Blue background
-      frameCounter++;
-
-      // Alternate coins every 100 frames
-      if (frameCounter % 100 === 0) {
-        coinCounter = (coinCounter + 1) % 3;
-        if (coinCounter === 0) {
-          goldCoin.visible = true;
-          silverCoin.visible = false;
-          bronzeCoin.visible = false;
-        } else if (coinCounter === 1) {
-          goldCoin.visible = false;
-          silverCoin.visible = true;
-          bronzeCoin.visible = false;
-        } else {
-          goldCoin.visible = false;
-          silverCoin.visible = false;
-          bronzeCoin.visible = true;
-        }
-      }
-
-      // Gravity
-      player.velocityY += 1;
-
-      // Jumping
-      if (keyWentDown("up") && jumpCount < 2) {
-        player.velocityY = -15;
-        jumpCount++;
-      }
-
-      // Reset jump count when player lands
-      if (player.y >= 370) {
-        player.velocityY = 0;
-        player.y = 370;
-        jumpCount = 0; // Reset the jump count when the player touches the ground
-      }
-
-      // Prevent the player from going above the screen
-      if (player.y < 0) {
-        player.y = 0;
-        player.velocityY = 5;
-      }
-
-      // Block collision
-      if (isTouching(player, block) || isTouching(player, block2)) {
-        if (!blockCollision) {
-          health -= 10;
-          blockCollision = true;
-        }
-      } else {
-        blockCollision = false;
-      }
-
-      // Move obstacles (only blocks)
-      moveObstacle(block);
-      moveObstacle(block2);
-
-      // Reset coins
-      if (goldCoin.visible) resetCoin(goldCoin);
-      if (silverCoin.visible) resetCoin(silverCoin);
-      if (bronzeCoin.visible) resetCoin(bronzeCoin);
-
-      // Draw sprites
-      drawSprites();
-
-      // Scoreboard
-      fill("black");
-      textSize(16);
-      text("Score: " + score, 10, 20);
-      text("Health: " + health, 10, 40);
-
-      // Game over
-      if (health <= 0) {
-        noLoop();
-        background("black");
-        fill("white");
-        textSize(32);
-        text("Game Over", 100, 200);
-      }
-    }
-  </script>
 </body>
 </html>
