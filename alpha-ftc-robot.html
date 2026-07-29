@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alpha, Ben's FTC robot for the 2025–2026 DECODE season." />
+  <title>Alpha FTC Robot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="project-body">
+  <header class="navbar">
+    <a href="index.html#home" class="logo">Portfolio</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://github.com/asdf-5844" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main class="project-page">
+    <a class="back-link" href="index.html#projects">← All projects</a>
+    <section class="project-hero">
+      <div>
+        <p class="project-eyebrow">FTC Competition Robot · 2025–2026</p>
+        <h1>Alpha</h1>
+        <p class="project-summary">A high-throughput ball-shooting robot engineered for the 2025–2026 DECODE season and proven in Chesapeake competition.</p>
+        <div class="project-meta">
+          <span>Java</span><span>Mechatronics</span><span>Controls</span><span>Rapid Prototyping</span>
+        </div>
+      </div>
+      <img src="images/Alpha.jpg" alt="Alpha FTC competition robot" />
+    </section>
+
+    <section class="project-details" aria-label="Project overview">
+      <article class="detail-card">
+        <p class="card-label">Challenge</p>
+        <h2>Competition reliability</h2>
+        <p>Design and build a system that could collect, handle, and shoot game balls consistently under match pressure.</p>
+      </article>
+      <article class="detail-card">
+        <p class="card-label">Engineering</p>
+        <h2>Integrated development</h2>
+        <p>Java programming, mechanical design, electronics, controls, testing, and rapid iteration came together in one platform.</p>
+      </article>
+      <article class="detail-card">
+        <p class="card-label">Outcome</p>
+        <h2>2nd-highest OPR</h2>
+        <p>Alpha competed in the Chesapeake region and finished the season with the region's second-highest OPR.</p>
+      </article>
+    </section>
+
+    <section class="media-section" aria-labelledby="alpha-video-heading">
+      <div class="media-heading">
+        <div>
+          <p class="project-eyebrow">Field footage</p>
+          <h2 id="alpha-video-heading">Alpha in Action</h2>
+        </div>
+        <p>Competition performance during driver-controlled play.</p>
+      </div>
+      <figure class="video-frame">
+        <video controls preload="metadata" playsinline>
+          <source src="videos/alpha-teleop-web.mp4" type="video/mp4" />
+          Your browser does not support embedded video.
+        </video>
+        <figcaption>Alpha in action — driver-controlled period at the 2026 Chesapeake Championship.
+          Our robot is playing on the blue alliance</figcaption>
+      </figure>
+    </section>
+
+    <section class="media-section compact-media" aria-labelledby="alpha-overview-heading">
+      <div class="media-heading">
+        <div>
+          <p class="project-eyebrow">System overview</p>
+          <h2 id="alpha-overview-heading">Engineering Infographic</h2>
+        </div>
+        <p>A visual overview of Alpha's design and competition capabilities.</p>
+      </div>
+      <figure class="spotlight-figure">
+        <img src="images/Alpha Infographic.png" alt="Engineering infographic describing Alpha FTC robot" />
+      </figure>
+    </section>
+
+    <nav class="project-pagination" aria-label="Project navigation">
+      <a href="index.html#projects"><span>Portfolio</span>Back to all projects</a>
+      <a href="alpha-tron-robot.html"><span>Next project</span>Alpha-Tron →</a>
+    </nav>
+  </main>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

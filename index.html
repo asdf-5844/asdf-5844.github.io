@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ben | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,17 +19,15 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <a href="https://github.com/asdf-5844" target="_blank">GitHub</a>
+      <a href="https://github.com/asdf-5844" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
 
     <button class="menu-btn" id="menuBtn">☰</button>
   </header>
 
   <section id="home" class="hero">
-    <div class="animated-bg">
-      <span></span><span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
+
+
     <div class="hero-content">
       <p class="tag">
         <span id="typedText"></span>
@@ -78,8 +79,8 @@
         </div>
       </div>
 
-      <div class="project-card">
-        <img src="images/IMG_0576.jpg" alt="Alpha">
+      <a class="project-card project-card-link" href="alpha-ftc-robot.html" aria-label="View Alpha FTC Robot project">
+        <img src="images/Alpha.jpg" alt="Alpha FTC competition robot">
         <div class="project-info">
           <h3>Alpha FTC Robot | 2025-2026</h3>
           <p>
@@ -90,12 +91,12 @@
             <span>Mechatronics</span>
             <span>Robotics</span>
           </div>
-          <a href="#" target="_blank">Add Link Later →</a>
+          <span class="project-link">View Project →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="project-card">
-        <div class="placeholder-img">+</div>
+      <a class="project-card project-card-link" href="alpha-tron-robot.html" aria-label="View Alpha-Tron Robot project">
+        <img src="images/AlphaTron_on_field.jpg" alt="Alpha-Tron robot on the field">
         <div class="project-info">
           <h3>Alpha-Tron Robot | 2026</h3>
           <p>
@@ -110,10 +111,26 @@
             <span>Java</span>
             <span>Controls</span>
           </div>
-          <a href="#" target="_blank">Coming Soon →</a>
+          <span class="project-link">View Project →</span>
         </div>
-      </div>
+      </a>
 
+      <a class="project-card project-card-link" href="ftc-cad-competition-2026.html" aria-label="View 2026 FTC Discord CAD Competition Robot project">
+        <img src="images/31811 CC 2026.png" alt="Onshape CAD model of the 2026 FTC Discord CAD Competition robot">
+        <div class="project-info">
+          <h3>FTC Discord CAD Competition Robot | 2026</h3>
+          <p>
+            A complete Chain Reaction robot designed in Onshape within a one-week competition deadline.
+          </p>
+          <div class="project-tags">
+            <span>Onshape CAD</span>
+            <span>Robotics</span>
+            <span>Design</span>
+            <span>Time Management</span>
+          </div>
+          <span class="project-link">View Project →</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -125,7 +142,7 @@
 
     <div class="contact-links">
       <a href="mailto:bchen5844@gmail.com">Email Me</a>
-      <a href="https://github.com/asdf-5844" target="_blank">GitHub</a>
+      <a href="https://github.com/asdf-5844" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </section>
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alpha-Tron, a 2026 robotics design, fabrication, and controls project." />
+  <title>Alpha-Tron Robot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="project-body">
+  <header class="navbar">
+    <a href="index.html#home" class="logo">Portfolio</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://github.com/asdf-5844" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main class="project-page">
+    <a class="back-link" href="index.html#projects">← All projects</a>
+    <section class="project-hero">
+      <div>
+        <p class="project-eyebrow">Offseason Robotics · 2026</p>
+        <h1>Alpha-Tron</h1>
+        <p class="project-summary">A complete offseason robotics platform developed from CAD concept through fabrication, electronics, and Java controls.</p>
+        <div class="project-meta">
+          <span>Onshape</span><span>Fusion 360</span><span>Java</span><span>Fabrication</span>
+        </div>
+      </div>
+      <img src="images/AlphaTron_on_field.jpg" alt="Alpha-Tron robot on the field" />
+    </section>
+
+    <section class="project-details" aria-label="Project overview">
+      <article class="detail-card">
+        <p class="card-label">Design</p>
+        <h2>Built for serviceability</h2>
+        <p>The Onshape model prioritized practical assembly, accessible mechanisms, and efficient fabrication.</p>
+      </article>
+      <article class="detail-card">
+        <p class="card-label">Build</p>
+        <h2>Digital to physical</h2>
+        <p>3D printing and hands-on fabrication translated the CAD into a working mechanical system.</p>
+      </article>
+      <article class="detail-card">
+        <p class="card-label">Controls</p>
+        <h2>Responsive operation</h2>
+        <p>Java software and control systems coordinate the robot's mechanisms and driver inputs.</p>
+      </article>
+    </section>
+
+    <section class="media-section render-section" aria-labelledby="render-heading">
+      <div class="media-heading">
+        <div>
+          <p class="project-eyebrow">Design visualization</p>
+          <h2 id="render-heading">Fusion 360 Renders</h2>
+        </div>
+        <p>Presentation renders created to communicate the complete mechanical design.</p>
+      </div>
+      <div class="render-grid">
+        <figure>
+          <img src="images/Full_Robot_Render.png" alt="Side render of the Alpha-Tron robot" />
+          <figcaption>Complete robot assembly · side perspective</figcaption>
+        </figure>
+        <figure>
+          <img src="images/Render_Top2.png" alt="Top render of the Alpha-Tron robot" />
+          <figcaption>Complete robot assembly · top perspective</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="media-section" aria-labelledby="tron-video-heading">
+      <div class="media-heading">
+        <div>
+          <p class="project-eyebrow">Build demonstration</p>
+          <h2 id="tron-video-heading">Alpha-Tron in Action</h2>
+        </div>
+        <p>A project demonstration video will be added after testing and filming are complete.</p>
+      </div>
+      <div class="video-placeholder" role="img" aria-label="Placeholder for a future Alpha-Tron demonstration video">
+        <span class="play-icon">▶</span>
+        <div>
+          <strong>Demonstration video coming soon</strong>
+          <p>Planned: subsystem walkthrough, driver operation, and field testing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="repository-callout" aria-labelledby="repository-heading">
+      <svg class="github-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.41-1.27.74-1.56-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+      <div>
+        <p class="project-eyebrow">Source code</p>
+        <h2 id="repository-heading">Explore the Alpha-Tron Repository</h2>
+        <p>View the Java codebase, controls development, and ongoing offseason work on GitHub.</p>
+      </div>
+      <a class="btn primary" href="https://github.com/asdf-5844/FTCOffseason2026" target="_blank" rel="noopener noreferrer">View repository ↗</a>
+    </section>
+
+    <nav class="project-pagination" aria-label="Project navigation">
+      <a href="alpha-ftc-robot.html"><span>Previous project</span>← Alpha</a>
+      <a href="ftc-cad-competition-2026.html"><span>Next project</span>CAD Competition →</a>
+    </nav>
+  </main>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
