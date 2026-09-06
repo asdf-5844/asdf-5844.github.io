@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A custom CAD robot concept designed for the FTC Into the Deep game, featuring linear slides, a co-axial virtual four-bar intake, and multi-degree-of-freedom arms." />
+  <title>ITD Concept Robot | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="project-body">
+  <header class="navbar">
+    <a href="index.html#home" class="logo">Portfolio</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://github.com/asdf-5844" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main class="project-page">
+    <a class="back-link" href="index.html#ftc-robotics">← Back to FTC Robotics</a>
+
+    <section class="project-hero">
+      <div>
+        <p class="project-eyebrow">FTC Into the Deep · Concept Design · 2026</p>
+        <h1>ITD Concept Robot</h1>
+        <p class="project-summary">A custom CAD robot developed around the scoring demands of the FTC Into the Deep game. The concept combines compact packaging with versatile mechanisms for collecting, transferring, and scoring both samples and specimens.</p>
+        <div class="project-meta">
+          <span>Onshape CAD</span><span>Robotics</span><span>Design</span>
+        </div>
+      </div>
+      <img src="images/ITD%20Cover%20Image.png" alt="ITD Concept Robot with its intake extended on the Into the Deep field" />
+    </section>
+
+    <section class="role-section" aria-labelledby="itd-role-heading">
+      <p class="project-eyebrow">Design approach</p>
+      <h2 id="itd-role-heading">A versatile concept for every scoring cycle</h2>
+      <p>I designed the robot as a complete system rather than a collection of separate mechanisms. The intake, transfer, slides, and articulated arms work together to support fast sample cycles while retaining the range of motion needed for specimen scoring.</p>
+    </section>
+
+    <section class="features-section" aria-labelledby="itd-features-heading">
+      <div class="section-heading">
+        <p class="project-eyebrow">Robot capabilities</p>
+        <h2 id="itd-features-heading">Key Features</h2>
+      </div>
+      <div class="features-grid itd-features-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <h3>Linear Slide Extension</h3>
+          <p>A compact linear-slide system provides the reach needed to move game elements between collection, transfer, and scoring positions.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Co-axial Virtual Four-Bar Intake</h3>
+          <p>Allows the claw to remain parallel to the ground while collecting game elements, then rotate for transfer. 
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Multi-DOF Scoring Arms</h3>
+          <p>Articulated outtake arm with multiple degrees of freedom provides flexible positioning for sample transfer, sample deposit, specimen pickup, and specimen scoring.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="media-section render-section" aria-labelledby="itd-gallery-heading">
+      <div class="media-heading">
+        <div>
+          <p class="project-eyebrow">CAD mechanism study</p>
+          <h2 id="itd-gallery-heading">Scoring System in Detail</h2>
+        </div>
+      </div>
+      <div class="itd-gallery">
+        <figure>
+          <img src="images/intake%20close%20view.png" alt="Close CAD view of the co-axial virtual four-bar intake" />
+          <figcaption><strong>Co-axial Virtual Four-Bar Intake</strong><span>Intake ready to drop and collect a sample. A third servo connected to the claw enables game-element collection in any orientation.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/sample%20transfer.png" alt="CAD view of the ITD robot transferring a sample from the intake" />
+          <figcaption><strong>Sample Transfer</strong><span>The intake and articulated arm aligned for a reliable handoff.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/sample%20deposit.png" alt="CAD view of the ITD robot depositing a sample" />
+          <figcaption><strong>Sample Deposit</strong><span>The linear slides and scoring arm extended into the deposit position.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/side%20specimen%20view.png" alt="Side CAD view of the ITD robot configured for specimen scoring" />
+          <figcaption><strong>Specimen Scoring</strong><span>Side profile showing the specimen-intaking while specimen-scoring configuration.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <nav class="project-pagination" aria-label="Project navigation">
+      <a href="alpha-ftc-robot.html"><span>Previous project</span>← Alpha</a>
+      <a href="ftc-cad-competition-2026.html"><span>Next project</span>Chain Reaction →</a>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
